@@ -1,6 +1,15 @@
 import "./App.css";
+import axios from "axios";
 
 export default function App() {
+  function handleRespond(response) {
+    alert(`the weather in Seoul is ${response.data.main.temp} `);
+    let apiKey = "7784a4cd4aa2e0c25ead7bd96d585b8a";
+    let apiUrl =
+      "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=${apiKey}";
+
+    axios.get(apiUrl).then(handleRespond);
+  }
   let weatherData = {
     city: "Seoul",
     temperature: 30,
