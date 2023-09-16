@@ -4,12 +4,16 @@ import axios from "axios";
 export default function App() {
   function handleRespond(response) {
     alert(`the weather in Seoul is ${response.data.main.temp} `);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
     let apiKey = "7784a4cd4aa2e0c25ead7bd96d585b8a";
-    let apiUrl =
-      "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=${apiKey}";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleRespond);
   }
+
   let weatherData = {
     city: "Seoul",
     temperature: 30,
@@ -20,7 +24,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="weather-app">
-        <form className="change-city">
+        <form className="change-city" onSubmit={handleSubmit}>
           <input type="text" className="city-name" placeholder="Type a city" />
           <input
             type="submit"
