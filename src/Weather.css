@@ -1,3 +1,33 @@
 .weather-app {
   border: 1px solid grey;
+  max-width: 550px;
+  border-radius: 3%;
+}
+
+form {
+  text-align: center;
+  margin: 5px;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+#search-button {
+  margin: 10px;
+}
+
+.city,
+.description,
+.details {
+  text-align: center;
+}
+
+.icon-element {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.details {
+  margin-bottom: 30px;
 }

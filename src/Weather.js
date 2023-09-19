@@ -25,18 +25,19 @@ export default function Weather() {
             value="Current"
           />
         </form>
-        <div className="city">Jeju</div>
-        <div className="current-time"></div>
-        <img src="#" alt="weather icon" className="icon-element" />
-        <div>
-          <span className="temperature-now">28℃</span>
-        </div>
-        <div className="description">Cloudy </div>
+        <h1 className="city">Jeju</h1>
+
+        <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt="weather icon"
+          className="icon-element "
+        />
+        <div className="description">Cloudy</div>
         <div className="details">
-          <div className="humidity">65%</div>
-          <div className="wind"> wind 13m/s</div>
+          <span className="degree">32℃ </span>
+          <span className="humidity"> 65% </span>
+          <span className="wind"> 13m/s</span>
         </div>
-        <div className="weather-forcast"></div>
       </div>
     </div>
   );
