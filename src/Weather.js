@@ -39,9 +39,9 @@ export default function Weather() {
         />
         <div className="description">Cloudy</div>
         <div className="details">
-          <span className="degree">32℃ </span>
-          <span className="humidity"> 65% </span>
-          <span className="wind"> 13m/s</span>
+          <span className="degree">🌡️32℃ </span>
+          <span className="humidity">💧 65% </span>
+          <span className="wind"> 💨13m/s</span>
         </div>
       </div>
     </div>
