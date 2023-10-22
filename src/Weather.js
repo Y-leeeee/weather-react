@@ -8,11 +8,11 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
-      temperature: response.temperature,
-      wind: response.wind,
-      city: response.city,
-      humidity: response.humidity,
-      description: response.description,
+      temperature: response.data.temperature.current,
+      wind: response.data.wind.speed,
+      city: response.data.city,
+      humidity: response.data.temperature.humidity,
+      description: response.data.condition.description,
     });
   }
 
@@ -40,18 +40,18 @@ export default function Weather(props) {
               value="Current"
             />
           </form>
-          <h1 className="city">{setWeatherData.city}</h1>
+          <h1 className="city">{weatherData.city}</h1>
 
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
             alt="weather icon"
             className="icon-element "
           />
-          <div className="description">{setWeatherData.description}</div>
+          <div className="description">{weatherData.description}</div>
           <div className="details">
-            <span className="degree">🌡️{setWeatherData.temperature}℃ </span>
-            <span className="humidity">💧 {setWeatherData.humidity}% </span>
-            <span className="wind"> 💨{setWeatherData.wind}m/s</span>
+            <span className="degree">🌡️{weatherData.temperature}℃ </span>
+            <span className="humidity">💧 {weatherData.humidity}% </span>
+            <span className="wind"> 💨{weatherData.wind}m/s</span>
           </div>
         </div>
       </div>
