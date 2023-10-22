@@ -1,6 +1,7 @@
 .weather-app {
   border: 1px solid grey;
   border-radius: 2%;
+  text-align: center;
 }
 
 form {
@@ -12,12 +13,6 @@ form {
 
 #search-button {
   margin: 10px;
-}
-
-.city,
-.description,
-.details {
-  text-align: center;
 }
 
 .icon-element {
