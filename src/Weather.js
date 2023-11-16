@@ -16,12 +16,13 @@ export default function Weather(props) {
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
       time: new Date(response.data.time * 1000),
+      icon: response.data.condition.icon,
     });
   }
 
   function search() {
     const apiKey = "bdb603847ff33c6odd47b612a380tf56";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}`;
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
