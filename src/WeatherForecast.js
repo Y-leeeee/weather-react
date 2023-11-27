@@ -9,7 +9,7 @@ export default function WeatherForecast(props) {
 
   useEffect(() => {
     setLoaded(false);
-  }, [props]);
+  }, [props.city]);
 
   function handleResponse(response) {
     setForecast(response.data.daily);
