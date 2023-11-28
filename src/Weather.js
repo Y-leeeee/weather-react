@@ -50,19 +50,13 @@ export default function Weather(props) {
             />
             <input
               type="submit"
-              className="btn btn-outline-dark"
+              className="btn btn-secondary"
               id="search-button"
               value="Search"
             />
-            <input
-              type="submit"
-              className="btn btn-outline-dark"
-              id="current-city-button"
-              value="Current"
-            />
           </form>
           <WeatherInfo data={weatherData} />
-          <WeatherForecast city={city} />
+          <WeatherForecast city={weatherData.city} />
         </div>
       </div>
     );
